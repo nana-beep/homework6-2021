@@ -10,8 +10,9 @@ body{
     background: #fff;
     border-bottom: 3px solid #50C7C7;
     display: flex;
-    flex: auto;
-    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
   }
   
@@ -31,7 +32,7 @@ body{
     padding: 0 30px;
   }
   
-  a.skip{
+  .skip a{
     background: white;
     left: 0;
     padding: 6px;
@@ -42,7 +43,7 @@ body{
     z-index: 1;
   }
   
-  a.skip:focus{
+  .skip a:focus{
     top:20px;
     color: black;
     text-decoration-style: solid;
@@ -77,10 +78,18 @@ body{
     background: #fff;
     border-radius: 7px;
     padding: 0 0 25px 0;
-    flex-basis: 400px;
+    flex-basis: 450px;
     flex-wrap: wrap;
-  
   }
+
+  .card header{
+    background: #45ADAD;
+    border: solid 2px #45ADAD;
+    padding: 20px 0px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
 
   .card > ul{
     list-style: none;
@@ -109,6 +118,8 @@ body{
     color: white;
     text-align: center;
   }
+
+
   
   .card_big{
     -webkit-transform: initial;
