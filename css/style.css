@@ -10,6 +10,7 @@ body{
     background: #fff;
     border-bottom: 3px solid #50C7C7;
     display: flex;
+    flex: auto;
     text-align: center;
 
   }
