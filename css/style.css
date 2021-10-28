@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Alegreya Sans SC', serif;
     background: url('../images/concrete_seamless.png') #f1f1f1;
   }
   
@@ -90,7 +90,7 @@ body{
   }
 
   .card > header{
-    background: #45ADAD;
+    background: #288088;
     border: solid 2px #45ADAD;
     padding: 20px 0px;
     border-top-left-radius: 7px;
