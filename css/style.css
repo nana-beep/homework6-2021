@@ -175,21 +175,20 @@ body{
         -webkit-transform: scaleY(1.1);
         transform: scaleY(1.1);
         z-index: -99;
-  }
-    header{
+    }
+
+    body > header{
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: space-between;
+      position: sticky; top:0;
     }
     
     #logo{
       display: flex;
       justify-content: flex-start;
-    }
-
-    #main{
-      position: sticky; top:0;
-    }
+      }
 
     .nav_links{
       display: flex;
@@ -219,12 +218,16 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    column-gap: 300px;
-    
+  }
+
+  nav{
+    width: 75%;
   }
 
   .pricing{
-    margin-bottom:auto;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    align-items: flex-end;
   }
   .card{
     border: solid 2px #45ADDD;
