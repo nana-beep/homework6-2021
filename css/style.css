@@ -12,9 +12,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-
   }
   
   h1{
@@ -29,15 +28,11 @@ body{
     padding: 5px;
   }
   
-  h3{
-    flex-wrap: wrap;
-    align-content: flex-start;
-  }
-
   p {
     padding: 0 30px;
   }
   
+
   .skip a{
     background: white;
     left: 0;
@@ -62,6 +57,12 @@ body{
   .nav_item a{
     padding: 10px;
     color:blue;
+  }
+
+  .nav_links{
+  
+    display: flex;
+    flex-direction: column;
   }
   
   .nav_item a:hover, a:focus{
@@ -88,16 +89,12 @@ body{
     flex-wrap: wrap;
   }
 
-  .card header{
+  .card > header{
     background: #45ADAD;
     border: solid 2px #45ADAD;
     padding: 20px 0px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
 
 
@@ -149,12 +146,7 @@ body{
     margin: 10px;
   }
 
-  #logo{
-    animation-name: logo;
-    animation-duration: 5s infinite;
-  }
-
-  @keyframes logoani{
+  @keyframes logos{
     from {
       width: 50px;
       opacity: 0;
@@ -163,6 +155,12 @@ body{
       width: 425px;
       opacity: 1;
     }
+  }
+
+  #logo{
+    animation-name: logos;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
   }
   
   footer{
@@ -180,10 +178,13 @@ body{
   }
     header{
       display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: center;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    #logo{
+      display: flex;
+      justify-content: flex-start;
     }
 
     #main{
@@ -191,11 +192,54 @@ body{
     }
 
     .nav_links{
-      display: inline-flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: flex-end;
-      align-content: flex-end;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    } 
+
+    .card{
+      flex-basis: 250px;
     }
 }
-  
+
+@media (prefers-reduced-motion: reduce) {
+  #logo{
+    animation: none;
+  }
+}
+
+@media print{
+  body{
+    background-image: none;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 300px;
+    
+  }
+
+  .pricing{
+    margin-bottom:auto;
+  }
+  .card{
+    border: solid 2px #45ADDD;
+    flex-basis: 250px;
+
+  }
+  .gallery, #gallery{
+    display: none;
+  }
+
+  .card li:nth-child(2):after{
+    content: '\1F44D';
+  }
+
+  .card li:nth-child(odd):before{
+    content: '\1F44D';
+  }
+}
