@@ -188,12 +188,14 @@ body{
     #logo{
       display: flex;
       justify-content: flex-start;
+      position: sticky; top:0;
       }
 
     .nav_links{
       display: flex;
       flex-direction: row;
       align-items: center;
+      position: sticky; top:0;
     } 
 
     .card{
